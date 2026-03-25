@@ -24,29 +24,78 @@
 <body>
 
     <!-- 헤더 (Navbar) -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">League of Legends</a>
+            <a class="navbar-brand" href="http://localhost:8080/index.html">리그 오브 레전드</legend></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">뉴스</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">챔피언</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">다운로드</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">로그인</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.leagueoflegends.com/ko-kr/news/tags/patch-notes/">뉴스</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.leagueoflegends.com/ko-kr/champions/">챔피언</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://download.kr.riotgames.com/league">다운로드</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://authenticate.riotgames.com/">로그인</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.leagueoflegends.com/ko-kr/">공식웹사이트</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://lol.ps/" target="_blank">외부 사이트</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">리그오브레전드</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">리그홈</a>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">뉴스</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">챔피언</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">다운로드</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">로그인</a>
+        </li>
+      
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            외부웹사이트
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">롤 공식홈</a></li>
+            <li><a class="dropdown-item" href="https://lol.ps/" target="_blank">롤 전적</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">관련 유튜브</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
     <!-- 히어로 배너 (Hero Banner) -->
     <section class="hero d-flex align-items-center justify-content-center text-center py-5">
         <div class="container">
             <h1 class="display-3 fw-bold">League of Legends</h1>
             <p class="lead">적의 넥서스를 파괴하세요! 5v5 MOBA 전투에서 팀과 함께 승리하세요.</p>
-            <a href="#" class="btn btn-primary btn-lg">무료 플레이</a>
+            <a href="https://www.leagueoflegends.com/ko-kr/" class="btn btn-primary btn-lg">무료 플레이</a>
         </div>
     </section>
 
@@ -54,21 +103,75 @@
     <section class="container my-5">
         <h2 class="text-center mb-4 accent-purple">챔피언 선택</h2>
         <p class="text-center mb-5">전투에 뛰어들기, 팀 지원, 또는 그 중간? 당신의 스타일을 선택하세요.</p>
-        <div class="row g-4">
+        <!-- <div class="row row-cols-auto g-4"> -->
+            <div class="row g-4">
             <!-- Aatrox -->
-            <div class="col-md-6 col-lg-4 col-xl-2">
+            <!-- <div class="col-md-6 col-lg-4 col-xl-2">
                 <div class="card text-center h-100">
+                    <a href="https://www.leagueoflegends.com/ko-kr/champions/aatrox/">
                     <img src="https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Aatrox.png" class="card-img-top" alt="Aatrox" loading="lazy">
+                    </a>    
                     <div class="card-body">
                         <h5 class="card-title accent-red">Aatrox (탑)</h5>
                         <p class="card-text">어둠의 검으로 적을 베세요.</p>
                     </div>
                 </div>
+            </div> -->
+            <div class="col">
+    <div class="card bg-dark text-white border-secondary h-100">
+        <img src="https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Aatrox.png" class="card-img-top" alt="아트록스">
+        
+        <div class="card-body">
+            <h5 class="card-title">아트록스 (Aatrox)</h5>
+            <p class="card-text small">역할: 전사 / 난이도: 상</p>
+        </div>
+        
+        <div class="card-footer bg-transparent border-0">
+            <button class="btn btn-outline-light w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalAatrox"
+                    data-champ="Aatrox">
+                상세 보기
+            </button>
+            <!-- 모달 (iframe으로 Aatrox.html 불러오기) -->
+<div class="modal fade" id="modalAatrox" tabindex="-1" aria-labelledby="modalAatroxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-white border-secondary">
+            
+            <!-- 헤더 -->
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="modalAatroxLabel">
+                    아트록스 (Aatrox) 상세 정보
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
+            <!-- 바디 (iframe 추가) -->
+            <div class="modal-body p-0">
+                <iframe src="Aatrox.html" 
+                        width="100%" 
+                        height="600px" 
+                        style="border: none;">
+                </iframe>
+            </div>
+
+            <!-- 푸터 -->
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">
+                    닫기
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
             <!-- Sylas -->
             <div class="col-md-6 col-lg-4 col-xl-2">
                 <div class="card text-center h-100">
-                    <img src="https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Sylas.png" class="card-img-top" alt="Sylas" loading="lazy">
+                    <img src="image/sylas.jpg" class="card-img-top" alt="Sylas" loading="lazy" style="height: 200px; object-fit: cover; object-position: center;">
                     <div class="card-body">
                         <h5 class="card-title accent-purple">Sylas (정글/미드)</h5>
                         <p class="card-text">궁극기를 훔치세요!</p>
