@@ -12,9 +12,13 @@
 - HTML 기본 학습
 - LoL 메인 화면 개발 완료
 
+
+## 📚 7주차 수업 내용
+- 
 <div align="center">
-  <img src="screenshots/2026-01-26 오전 9_51_43.png" width="45%" alt="실습 1 화면">
-  <img src="screenshots/파일명.png" width="45%" alt="실습 2 화면">
+  <img src="screenshots/실습 1.png" width="45%" alt="실습 1 화면">
+  <img src="screenshots/실습2 .png" width="45%" alt="실습 2 화면">
+  <img src="screenshots/7주차 실습.png" width="45%" alt="7주차 실습>
 </div>
 
 ---
