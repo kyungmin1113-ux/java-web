@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>잭스  상세</title>
+  
+  <!-- Bootstrap 5 CSS (index.html과 동일하게 연동) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- LOL 스타일 맞추기 위한 간단 커스텀 (필요 시 resources/css/custom.css로 이동) -->
+  <style>
+    body {
+      background-color: #0a0e17;
+      color: white;
+      padding: 1.5rem;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    h3, h4 {
+      color: #c8aa6e; /* LOL 골드 톤 */
+    }
+    .text-muted {
+      color: #a0a0a0 !important;
+    }
+    .list-group-item {
+      background: transparent;
+      border-color: #444;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row g-4">
+      
+      <!-- 왼쪽: 이미지 + 기본 정보 -->
+      <div class="col-lg-5 text-center">
+        <img src="https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Jax.png" class="img-fluid rounded shadow-lg" alt="잭스" style="max-height: 480px; object-fit: contain;">
+        <div class="mt-3">
+          <h3 class="mb-1">잭스 (Jax)</h3>
+          <p class="text-muted fs-5">전사 / 난이도: 보통</p>
+        </div>
+      </div>
+      
+      <!-- 오른쪽: 스킬 + 스토리 -->
+      <div class="col-lg-7">
+        <h4 class="border-bottom border-secondary pb-2 mb-3">스킬</h4>
+        <ul class="list-group list-group-flush mb-4">
+          <li class="list-group-item">패시브: 가차없는 맹공</li>
+          <li class="list-group-item">Q: 도약 공격</li>
+          <li class="list-group-item">W: 무기 강화 </li>
+          <li class="list-group-item">E: 반격 </li>
+          <li class="list-group-item">R: 무기의 달인</li>
+        </ul>
+
+        <h4 class="border-bottom border-secondary pb-2 mb-3">배경 스토리 요약</h4>
+        <p class="text-secondary lh-lg">
+        독특한 무기와 날카로운 독설 모두 따라올 자가 없는 잭스는 이케시아에서 마지막으로 알려진 무기의 달인이다. 
+        풀려난 공허의 잔해로 조국이 기울자, 잭스와 그 무리는 조국의 남은 부분이나마 수호하기로 맹세했다. 
+        마법이 강해지고 잠재하는 위협이 다시금 태동하자, 잭스는 발로란을 떠돌며 만나는 모든 전사에게 이케시아의 마지막 불빛을 휘두른다.
+         그와 견줄 수 있을 정도로 강한지 시험하기 위해.
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>
