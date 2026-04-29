@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/search.css">
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="js/test.js"></script> -->
+    <script src="js/test2.js"></script>
 
     <script>
     window.onload = function() {
@@ -53,29 +53,41 @@
         </div>
     </nav> -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg dark">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
+
+    <!-- 로고 -->
     <a class="navbar-brand" href="#">
-        <img src="image/Logo.jpg" alt="로고" height="40" class="me-2">리그오브레전드 </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <img src="image/Logo.jpg" alt="" width="30" height="24">
+    </a>
+
+    <!-- 다크모드 버튼 -->
+    <button class="btn border-0 text-white" id="themeToggleBtn" onclick="toggleTheme()">
+      DARK
     </button>
+
+    <!-- 메뉴 -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">메인화면</a>
+          <a class="nav-link active" href="#">메인화면</a>
         </li>
-       <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">뉴스</a>
-        </li>
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="main_page_sub/champion.html">챔피언</a>
+          <a class="nav-link active" href="#">뉴스</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="main_page_sub/download.html">다운로드</a>
+          <a class="nav-link active" href="main_page_sub/champion.html">챔피언</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="main_page_sub/Login.html">로그인</a>
+          <a class="nav-link active" href="main_page_sub/download.html">다운로드</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="main_page_sub/Login.html">로그인</a>
         </li>
       
         <li class="nav-item dropdown">
@@ -686,6 +698,7 @@
 
 
 <script src="js/search.js"></script>
+<script src="js/toggle.js"></script>
 
 </body>
 </html>
