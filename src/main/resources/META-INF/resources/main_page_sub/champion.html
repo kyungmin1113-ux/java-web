@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends - 챔피언</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/image/Logo.jpg" alt="logo" width="30" height="24">
+            </a>
+
+            <button class="btn border-0 text-white" id="themeToggleBtn" onclick="toggleTheme()">
+                DARK
+            </button>
+
+            <div class="collapse navbar-collapse show">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">메인화면</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.leagueoflegends.com/ko-kr/news/" target="_blank">뉴스</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/main_page_sub/champion.html">챔피언</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/main_page_sub/download.html">다운로드</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/login">로그인</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search" id="searchInput">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero d-flex align-items-center justify-content-center text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">챔피언</h1>
+            <p class="lead">수업 프로젝트에서 구현한 챔피언 정보를 확인하세요.</p>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-dark text-white border-secondary h-100">
+                    <img src="/image/Aatrox.jpg" class="card-img-top" alt="아트록스">
+                    <div class="card-body">
+                        <h5 class="card-title">아트록스 (Aatrox)</h5>
+                        <p class="card-text">역할: 전사 / 라인: 탑 / 난이도: 상</p>
+                        <a class="btn btn-outline-light w-100" href="/modals/Aatrox.html">상세 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-dark text-white border-secondary h-100">
+                    <img src="/image/sylas.jpg" class="card-img-top" alt="사일러스">
+                    <div class="card-body">
+                        <h5 class="card-title">사일러스 (Sylas)</h5>
+                        <p class="card-text">역할: 마법사, 암살자 / 라인: 정글, 미드 / 난이도: 중</p>
+                        <a class="btn btn-outline-light w-100" href="/modals/Sylas.html">상세 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-dark text-white border-secondary h-100">
+                    <img src="/image/Yunara.jpg" class="card-img-top" alt="유나라">
+                    <div class="card-body">
+                        <h5 class="card-title">유나라 (Yunara)</h5>
+                        <p class="card-text">역할: 원거리 딜러 / 라인: 원딜 / 난이도: 중</p>
+                        <a class="btn btn-outline-light w-100" href="/modals/Yunara.html">상세 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-dark text-white border-secondary h-100">
+                    <img src="/image/mel.jpg" class="card-img-top" alt="멜">
+                    <div class="card-body">
+                        <h5 class="card-title">멜 (Mel)</h5>
+                        <p class="card-text">역할: 마법사, 서포터 / 라인: 미드, 서폿 / 난이도: 중</p>
+                        <a class="btn btn-outline-light w-100" href="/modals/Mel.html">상세 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-dark text-white border-secondary h-100">
+                    <img src="/image/zaahen.jpg" class="card-img-top" alt="자헨">
+                    <div class="card-body">
+                        <h5 class="card-title">자헨 (Zaahen)</h5>
+                        <p class="card-text">역할: 전사, 암살자 / 라인: 탑, 정글 / 난이도: 하</p>
+                        <a class="btn btn-outline-light w-100" href="/modals/Zaahen.html">상세 보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/toggle.js"></script>
+</body>
+</html>

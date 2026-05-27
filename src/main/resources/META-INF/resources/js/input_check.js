@@ -98,7 +98,9 @@ function submitRegister() {
     } catch (error) {
         // 이제 여기로 빠질 일은 거의 없습니다.
         console.error("암호화 에러:", error);
-        alert("회원가입 처리 중 오류가 발생했습니다.");
+        if (typeof showToast === 'function') {
+            showToast("회원가입 처리 중 오류가 발생했습니다.", "danger");
+        }
     }
 }
 

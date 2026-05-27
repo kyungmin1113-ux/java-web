@@ -52,7 +52,7 @@ public class AuthResource {
         // 로그인 실패
         if (user == null || !user.password.equals(password)) {
             return Response
-                    .seeOther(URI.create("/login?error=1"))
+                    .seeOther(URI.create("/login/login.html?error=1"))
                     .build();
         }
 
@@ -94,7 +94,7 @@ public Response afterLogin() {
 
 @GET
 @Path("/logout")
-public Response logout() {
+public Response logout(@QueryParam("next") String next) {
 
     // 로그아웃 전 세션 정보 출력
     System.out.println("=== 로그아웃 전 세션 ID : " + context.session().id());
@@ -111,9 +111,11 @@ public Response logout() {
     System.out.println("=== 로그아웃 후 loginUser : "
             + context.session().get("loginUser"));
 
-    // 메인 페이지로 이동
+    String redirect = "login".equals(next) ? "/login" : "/";
+
+    // 메인 페이지 또는 로그인 페이지로 이동
     return Response
-            .seeOther(URI.create("/"))
+            .seeOther(URI.create(redirect))
             .build();
 }
 
@@ -270,6 +272,71 @@ public Response profileInfo() {
 
     ).build();
 }
+
+@POST
+@Path("/profile/update")
+@Transactional
+@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+public Response profileUpdate(
+        @FormParam("email") String email,
+        @FormParam("phone") String phone) {
+
+    String loginUser = context.session().get("loginUser");
+
+    if (loginUser == null) {
+        return Response
+                .seeOther(URI.create("/login"))
+                .build();
+    }
+
+    User found = User.findByEmail(email);
+
+    if (found != null && !found.username.equals(loginUser)) {
+        return Response
+                .seeOther(URI.create("/profile?error=duplicate_email"))
+                .build();
+    }
+
+    User user = User.findByUsername(loginUser);
+    user.email = email;
+    user.phone = phone;
+
+    return Response
+            .seeOther(URI.create("/profile?success=updated"))
+            .build();
+}
+
+@POST
+@Path("/profile/password")
+@Transactional
+@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+public Response profilePassword(
+        @FormParam("currentPassword") String currentPassword,
+        @FormParam("newPassword") String newPassword) {
+
+    String loginUser = context.session().get("loginUser");
+
+    if (loginUser == null) {
+        return Response
+                .seeOther(URI.create("/login"))
+                .build();
+    }
+
+    User user = User.findByUsername(loginUser);
+
+    if (!user.password.equals(currentPassword)) {
+        return Response
+                .seeOther(URI.create("/profile?error=wrong_password"))
+                .build();
+    }
+
+    user.password = newPassword;
+
+    return Response
+            .seeOther(URI.create("/profile?success=password_changed"))
+            .build();
+}
+
 @POST
 @Path("/profile/upload")
 @Transactional
@@ -377,4 +444,3 @@ public Response mainPage() {
 }
 
 }
-

@@ -1,29 +1,48 @@
-// 버튼 클릭 시 실행되는 메인 함수
-async function validateAndLogin() {
-    
+function showLoginError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    const msgId = fieldId === 'usernameInput' ? 'usernameMsg' : 'passwordMsg';
+    const msg = document.getElementById(msgId);
+
+    field.classList.add('is-invalid');
+    if (msg) {
+        msg.textContent = message;
+        msg.style.display = 'block';
+    }
+}
+
+function clearLoginErrors() {
     const usernameInput = document.getElementById('usernameInput');
     const passwordInput = document.getElementById('passwordInput');
     const usernameMsg = document.getElementById('usernameMsg');
     const passwordMsg = document.getElementById('passwordMsg');
 
-    // 1. 초기화 (이전 에러 메시지 지우기)
     usernameInput.classList.remove('is-invalid');
     passwordInput.classList.remove('is-invalid');
     usernameMsg.textContent = "";
     passwordMsg.textContent = "";
+    usernameMsg.style.display = "";
+    passwordMsg.style.display = "";
+}
+
+// 버튼 클릭 시 실행되는 메인 함수
+async function validateAndLogin() {
+    
+    const usernameInput = document.getElementById('usernameInput');
+    const passwordInput = document.getElementById('passwordInput');
+
+    // 1. 초기화 (이전 에러 메시지 지우기)
+    clearLoginErrors();
 
     // 2. 유효성 검사 (간단한 빈칸 체크)
     let isValid = true;
 
     if (usernameInput.value.trim() === "") {
-        usernameInput.classList.add('is-invalid');
-        usernameMsg.textContent = "아이디를 입력해주세요.";
+        showLoginError('usernameInput', "아이디를 입력해주세요.");
         isValid = false;
     }
 
     if (passwordInput.value.trim() === "") {
-        passwordInput.classList.add('is-invalid');
-        passwordMsg.textContent = "비밀번호를 입력해주세요.";
+        showLoginError('passwordInput', "비밀번호를 입력해주세요.");
         isValid = false;
     }
 
@@ -56,9 +75,13 @@ async function submitLogin(rawPassword) {
 
     } catch (error) {
         console.error("비밀번호 암호화 중 에러 발생:", error);
-        alert("로그인 처리 중 오류가 발생했습니다. 다시 시도해 주세요.");
+        if (typeof showToast === 'function') {
+            showToast("로그인 처리 중 오류가 발생했습니다. 다시 시도해 주세요.", "danger");
+        }
     }
-    // login.js 하단에 추가
+}
+
+// login.js 하단에 추가
 window.addEventListener('load', function () {
 
     const params = new URLSearchParams(window.location.search);
@@ -68,11 +91,10 @@ window.addEventListener('load', function () {
     if (error === '1') {
 
         // 로그인 실패 메시지 출력
-        showError(
+        showLoginError(
             'passwordInput',
             '아이디 또는 패스워드가 올바르지 않습니다.'
         );
     }
 
 });
-}

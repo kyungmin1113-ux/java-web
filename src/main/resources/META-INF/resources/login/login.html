@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/search.css">
     <script src="/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/test2.js"></script>
 </head>
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <img src="/image/Logo.jpg" alt="" width="30" height="24">
     </a>
 
@@ -28,11 +27,11 @@
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link active" href="#">메인화면</a>
+          <a class="nav-link active" href="/">메인화면</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="#">뉴스</a>
+          <a class="nav-link active" href="https://www.leagueoflegends.com/ko-kr/news/" target="_blank">뉴스</a>
         </li>
 
         <li class="nav-item">
@@ -109,9 +108,33 @@
     </div>
 </section>
 
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999">
+        <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body" id="toastBody">메시지</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
     <script src="/js/search.js"></script>
     <script src="/js/toggle.js"></script>
+    <script src="/js/test.js"></script>
     <script src="/js/input_sha256.js"></script>
-    <script src="/js/login.js"></script>
+    <script src="/js/login.js?v=3"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+
+            if (params.get('error') === '1') {
+                const passwordInput = document.getElementById('passwordInput');
+                const passwordMsg = document.getElementById('passwordMsg');
+
+                passwordInput.classList.add('is-invalid');
+                passwordMsg.textContent = '아이디 또는 패스워드가 올바르지 않습니다.';
+                passwordMsg.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>

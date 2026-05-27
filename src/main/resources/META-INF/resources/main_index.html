@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/search.css">
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/test2.js"></script>
 
     <script>
-    window.onload = function() {
+    document.addEventListener('DOMContentLoaded', function() {
         showToast('메인 페이지 로딩 완료');
-    }
-    </script> 
+    });
+    </script>
 
 <!-- 커스텀 스타일 (LOL 테마 + 챔피언 호버 효과) -->
     <!-- <style>
@@ -57,7 +56,7 @@
   <div class="container-fluid">
 
     <!-- 로고 -->
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <img src="image/Logo.jpg" alt="" width="30" height="24">
     </a>
 
@@ -71,19 +70,19 @@
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link active" href="#">메인화면</a>
+          <a class="nav-link active" href="/">메인화면</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="#">뉴스</a>
+          <a class="nav-link active" href="https://www.leagueoflegends.com/ko-kr/news/" target="_blank">뉴스</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="main_page_sub/champion.html">챔피언</a>
+          <a class="nav-link active" href="/main_page_sub/champion.html">챔피언</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="main_page_sub/download.html">다운로드</a>
+          <a class="nav-link active" href="/main_page_sub/download.html">다운로드</a>
         </li>
 
         <li class="nav-item">
@@ -101,9 +100,6 @@
             <li><a class="dropdown-item" href="https://www.youtube.com/results?search_query=%EB%A1%A4" target="_blank">관련 유튜브</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-        </li>
       </ul>
       <form class="d-flex" id="searchForm">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
@@ -118,7 +114,7 @@
         <div class="container">
             <h1 class="display-3 fw-bold">League of Legends</h1>
             <p class="lead">적의 넥서스를 파괴하세요! 5v5 MOBA 전투에서 팀과 함께 승리하세요.</p>
-            <a href="#" class="btn btn-primary btn-lg" onclick="alert('즐거운 플레이 되세요')">무료 플레이</a>
+            <a href="https://www.leagueoflegends.com/ko-kr/download/" target="_blank" class="btn btn-primary btn-lg" onclick="showToast('즐거운 플레이 되세요')">무료 플레이</a>
     </section>
 
 <!-- 챔피언 선택 섹션 (작은 썸네일 PNG로 업데이트) -->
@@ -630,7 +626,7 @@
                     <div class="card-body">
                         <h5 class="card-title">새로운 챔피언 출시</h5>
                         <p class="card-text">2026 루나 레벨 이벤트!</p>
-                        <a href="#" class="btn btn-outline-primary">더 보기</a>
+                        <a href="https://www.leagueoflegends.com/ko-kr/news/" target="_blank" class="btn btn-outline-primary">더 보기</a>
                     </div>
                 </div>
             </div>
@@ -639,7 +635,7 @@
                     <div class="card-body">
                         <h5 class="card-title">패치 노트</h5>
                         <p class="card-text">밸런스 업데이트.</p>
-                        <a href="#" class="btn btn-outline-primary">더 보기</a>
+                        <a href="https://www.leagueoflegends.com/ko-kr/news/tags/patch-notes/" target="_blank" class="btn btn-outline-primary">더 보기</a>
                     </div>
                 </div>
             </div>

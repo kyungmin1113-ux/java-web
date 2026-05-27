@@ -1,22 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('searchForm').addEventListener('submit', function(e) {
+    const searchForm = document.getElementById('searchForm');
+    if (!searchForm) {
+        return;
+    }
+
+    searchForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const query = document.getElementById('searchInput').value;
         performSearch(query);
     });
+
+    const pendingQuery = sessionStorage.getItem('pendingSearchQuery');
+    if (pendingQuery && document.getElementById('searchResults')) {
+        sessionStorage.removeItem('pendingSearchQuery');
+        document.getElementById('searchInput').value = pendingQuery;
+        performSearch(pendingQuery);
+    }
 });
 
 // ── 챔피언 데이터 ──────────────────────────────────────────────
 const CHAMPIONS = [
-    { name: '아트록스', engName: 'Aatrox', role: '전사', lane: '탑', img: 'image/Aatrox.jpg', difficulty: '상' },
-    { name: '사일러스', engName: 'Sylas', role: '마법사', lane: '정글/미드', img: 'image/sylas.jpg', difficulty: '중' },
+    { name: '아트록스', engName: 'Aatrox', role: '전사', lane: '탑', img: '/image/Aatrox.jpg', difficulty: '상' },
+    { name: '사일러스', engName: 'Sylas', role: '마법사', lane: '정글/미드', img: '/image/sylas.jpg', difficulty: '중' },
     { name: '애니비아', engName: 'Anivia', role: '마법사', lane: '미드', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Anivia.png', difficulty: '상' },
     { name: '브라이어', engName: 'Briar', role: '전사', lane: '정글', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Briar.png', difficulty: '중' },
     { name: '잭스', engName: 'Jax', role: '전사', lane: '탑', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Jax.png', difficulty: '하' },
     { name: '징크스', engName: 'Jinx', role: '원거리딜러', lane: '원딜', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Jinx.png', difficulty: '중' },
-    { name: '유나라', engName: 'Yunara', role: '원거리딜러', lane: '원딜', img: 'image/Yunara.jpg', difficulty: '중' },
-    { name: '멜', engName: 'Mel', role: '마법사,서포터', lane: '미드,서폿', img: 'image/Mel.jpg', difficulty: '중' },
-    { name: '자헨', engName: 'Zaahen', role: '전사,암살자', lane: '탑,정글', img: 'image/Zaahen.jpg', difficulty: '하' },
+    { name: '유나라', engName: 'Yunara', role: '원거리딜러', lane: '원딜', img: '/image/Yunara.jpg', difficulty: '중' },
+    { name: '멜', engName: 'Mel', role: '마법사,서포터', lane: '미드,서폿', img: '/image/mel.jpg', difficulty: '중' },
+    { name: '자헨', engName: 'Zaahen', role: '전사,암살자', lane: '탑,정글', img: '/image/zaahen.jpg', difficulty: '하' },
 ];
 
 // ── 뉴스 데이터 ──────────────────────────────────────────────
@@ -29,6 +41,12 @@ const NEWS = [
 function performSearch(query) {
     const q = query.trim().toLowerCase(); // 앞 뒤 공백제거, 소문자 변환
     if (!q) return;
+
+    if (!document.getElementById('searchResults')) {
+        sessionStorage.setItem('pendingSearchQuery', query);
+        window.location.href = '/';
+        return;
+    }
 
     document.getElementById('searchKeywordDisplay').textContent = `"${query}"`; // 검색어 인식
 
@@ -101,4 +119,3 @@ function switchCategory(type, el) {
     document.getElementById('resultChampion').style.display = type === 'champion' ? 'block' : 'none';
     document.getElementById('resultNews').style.display = type === 'news' ? 'block' : 'none';
 }
-
