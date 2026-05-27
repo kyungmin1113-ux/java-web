@@ -9,49 +9,19 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/search.css">
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/test2.js"></script>
+
 
     <script>
     window.onload = function() {
-        alert("메인 페이지 로딩 완료");
+         showToast('로그인 성공!');
     }
     </script> 
 
-<!-- 커스텀 스타일 (LOL 테마 + 챔피언 호버 효과) -->
-    <!-- <style>
-        body { background-color: #0a0e17; color: #fff; font-family: 'Arial', sans-serif; }
-        .navbar { background-color: #000; }
-        .hero { background: linear-gradient(to bottom, #1e1e1e, #0a0e17); min-height: 60vh; }
-        .accent-purple { color: #a020f0; }
-        .accent-red { color: #ff0000; }
-        .card { background-color: #1e1e1e; border: none; transition: transform 0.3s, box-shadow 0.3s; }
-        .card:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(160, 32, 240, 0.5); }
-        .card-img-top { height: 200px; object-fit: cover; border-radius: 10px 10px 0 0; }
-        .btn-primary { background-color: #a020f0; border: none; }
-        .btn-primary:hover { background-color: #800080; }
-    </style> -->
+
 </head>
 <body>
 
-    <!-- 헤더 (Navbar) -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="http://localhost:8080/index.html">리그 오브 레전드</legend></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="https://www.leagueoflegends.com/ko-kr/news/tags/patch-notes/">뉴스</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.leagueoflegends.com/ko-kr/champions/">챔피언</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://download.kr.riotgames.com/league">다운로드</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://authenticate.riotgames.com/">로그인</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.leagueoflegends.com/ko-kr/">공식웹사이트</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://lol.ps/" target="_blank">외부 사이트</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
+
 
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -89,6 +59,18 @@
        <!-- 기존 로그인 버튼 제거, 로그아웃 버튼 추가 -->
         <li class="nav-item">
             <a class="nav-link btn btn-outline-danger btn-sm px-3 "href="/logout">로그아웃</a>
+        </li>
+
+        <!-- 기존 로그아웃 버튼 앞에 추가 -->
+        <li class="nav-item">
+            <!-- 기존 프로필 버튼 수정 -->
+            <a
+                class="nav-link"href="/profile" id="profileNavLink" data-bs-toggle="tooltip" data-bs-placement="bottom">프로필
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger btn-sm px-3"
+                href="/logout">로그아웃</a>
         </li>
       
         <li class="nav-item dropdown">
@@ -700,6 +682,8 @@
 
 <script src="../js/search.js"></script>
 <script src="../js/toggle.js"></script>
+<script src="../js/profile.js"></script>
+<script src="../js/test.js"></script>
 
 </body>
 </html>
