@@ -3,8 +3,6 @@
 > 학번: 20230968  
 > 이름: 기경민
 
-League of Legends 테마를 활용해 Quarkus 기반 자바 웹 페이지를 주차별로 확장한 수업 프로젝트입니다.  
-초기 정적 HTML 화면에서 시작해 챔피언 모달, 검색, MySQL 연동, 회원가입, 로그인, 세션, 프로필 이미지 업로드까지 단계적으로 구현했습니다.
 
 ---
 
@@ -21,7 +19,6 @@ League of Legends 테마를 활용해 Quarkus 기반 자바 웹 페이지를 주
 - 로그인 실패 메시지 표시
 - 프로필 페이지 및 프로필 이미지 업로드
 - 업로드 파일 확장자/용량 검사 및 오류 메시지 처리
-- WebSocket 기본 실습 코드 포함
 
 ---
 
@@ -130,49 +127,6 @@ League of Legends 테마를 활용해 Quarkus 기반 자바 웹 페이지를 주
 
 ---
 
-## 주요 파일 구조
-
-```text
-src/main/java/org/acme
-├── champion
-│   ├── Champion.java
-│   └── ChampionResource.java
-├── common
-│   └── DataSeeder.java
-├── login
-│   ├── AuthResource.java
-│   ├── SessionConfig.java
-│   └── User.java
-├── GreetingResource.java
-└── StartWebSocket.java
-
-src/main/resources/META-INF/resources
-├── css
-├── image
-├── js
-├── login
-├── main_page_sub
-├── modals
-├── uploads/profile
-└── main_index.html
-```
-
----
-
-## 실행 방법
-
-```bash
-./mvnw quarkus:dev
-```
-
-브라우저에서 아래 주소로 접속합니다.
-
-```text
-http://localhost:8080/
-```
-
----
-
 ## 화면 캡처
 
 <div align="center">
@@ -183,11 +137,6 @@ http://localhost:8080/
   <img src="screenshots/7주차 실습.png" width="45%" alt="7주차 검색 기능 화면">
   <img src="screenshots/7주차 추가 구현1.png" width="45%" alt="7주차 추가 구현 화면 1">
   <img src="screenshots/7주차 추가 구현2.png" width="45%" alt="7주차 추가 구현 화면 2">
-</div>
-
-### 13주차 마무리 화면
-
-<div align="center">
   <img src="screenshots/13-main.png" width="45%" alt="13주차 메인 화면">
   <img src="screenshots/13-champion.png" width="45%" alt="13주차 챔피언 페이지">
   <img src="screenshots/13-download.png" width="45%" alt="13주차 다운로드 페이지">
@@ -197,10 +146,3 @@ http://localhost:8080/
 </div>
 
 ---
-
-## 최근 정리
-
-- 12주차까지 수업 내용 구현 완료
-- 13주차 회원정보 수정 및 비밀번호 변경 기능 구현
-- Toast 기반 알림 처리와 네비게이션 링크 정리
-- README 주차별 진행 내용 정리 완료
