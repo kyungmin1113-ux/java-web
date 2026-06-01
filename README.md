@@ -43,12 +43,21 @@
 - LoL 메인 화면 초안 제작
 - 정적 리소스 경로 및 이미지 출력 확인
 
+<div align="center">
+  <img src="screenshots/실습 1.png" width="45%" alt="2주차 Quarkus 초기 화면">
+  <img src="screenshots/실습2 .png" width="45%" alt="3주차 LoL 메인 화면">
+</div>
+
 ### 4주차
 
 - Bootstrap 네비게이션 바 구성
 - LoL 로고 삽입
 - 메뉴 가운데 정렬 적용
 - 챔피언 카드 UI 구성 시작
+
+<div align="center">
+  <img src="screenshots/모달 추가1.png" width="45%" alt="4주차 네비게이션 및 챔피언 카드 화면">
+</div>
 
 ### 5주차
 
@@ -57,12 +66,18 @@
 - LoL 실행 파일 다운로드 링크 구성
 - Aatrox 챔피언 모달 페이지 추가
 
+<div align="center">
+  <img src="screenshots/모달 추가2.png" width="45%" alt="5주차 챔피언 모달 추가 화면">
+</div>
+
 ### 6주차
 
 - 챔피언 목록 화면 확장
 - Bootstrap JS 연동
 - 검색 기능 구현 준비
 - 모달 및 JS 구조 정리 진행
+
+> 화면 기능 확장 준비 단계로 별도 캡처 없음
 
 ### 7주차
 
@@ -72,10 +87,18 @@
 - Jax, Jinx, Mel, Yunara, Zaahen 등 챔피언 모달 추가
 - README 화면 캡처 정리
 
+<div align="center">
+  <img src="screenshots/7주차 실습.png" width="45%" alt="7주차 검색 기능 화면">
+  <img src="screenshots/7주차 추가 구현1.png" width="45%" alt="7주차 추가 구현 화면 1">
+  <img src="screenshots/7주차 추가 구현2.png" width="45%" alt="7주차 추가 구현 화면 2">
+</div>
+
 ### 8주차
 
 - 별도 커밋 기록 없음
 - 이전 주차 기능 보완 및 코드 정리 중심으로 진행
+
+> 별도 캡처 없음
 
 ### 9주차
 
@@ -84,12 +107,18 @@
 - `application.properties` 데이터베이스 설정 구성
 - WebSocket 실습 코드 추가
 
+> DB 연결 및 서버 설정 중심 작업으로 별도 캡처 없음
+
 ### 10주차
 
 - `Champion` 엔티티 및 `ChampionResource` 추가
 - `DataSeeder`로 초기 챔피언/사용자 데이터 입력
 - 로그인 페이지와 로그인 후 메인 화면 구성
 - 기존 메인 페이지 구조 정리
+
+<div align="center">
+  <img src="screenshots/13-main.png" width="45%" alt="10주차 로그인 후 메인 화면 기반">
+</div>
 
 ### 11주차
 
@@ -99,6 +128,10 @@
 - 입력값 유효성 검사 JS 작성
 - SHA-256 기반 비밀번호 해시 처리
 - 회원가입 완료 페이지 추가
+
+<div align="center">
+  <img src="screenshots/13-register-success.png" width="45%" alt="11주차 회원가입 완료 화면">
+</div>
 
 ### 12주차
 
@@ -111,6 +144,11 @@
 - 프로필 이미지 업로드 구현
 - 이미지 확장자 및 5MB 용량 제한 처리
 - 업로드 실패 사유별 오류 메시지 표시
+
+<div align="center">
+  <img src="screenshots/13-login-error.png" width="45%" alt="12주차 로그인 오류 메시지 화면">
+  <img src="screenshots/13-profile.png" width="45%" alt="12주차 프로필 페이지 화면">
+</div>
 
 ### 13주차
 
@@ -125,24 +163,9 @@
 - 비어 있던 챔피언 페이지와 회원가입 완료 페이지 보완
 - 모든 페이지 검색창 동작 흐름 보완
 
----
-
-## 화면 캡처
-
 <div align="center">
-  <img src="screenshots/실습 1.png" width="45%" alt="2주차 메인 화면">
-  <img src="screenshots/실습2 .png" width="45%" alt="3주차 HTML 실습 화면">
-  <img src="screenshots/모달 추가1.png" width="45%" alt="챔피언 모달 화면 1">
-  <img src="screenshots/모달 추가2.png" width="45%" alt="챔피언 모달 화면 2">
-  <img src="screenshots/7주차 실습.png" width="45%" alt="7주차 검색 기능 화면">
-  <img src="screenshots/7주차 추가 구현1.png" width="45%" alt="7주차 추가 구현 화면 1">
-  <img src="screenshots/7주차 추가 구현2.png" width="45%" alt="7주차 추가 구현 화면 2">
-  <img src="screenshots/13-main.png" width="45%" alt="13주차 메인 화면">
   <img src="screenshots/13-champion.png" width="45%" alt="13주차 챔피언 페이지">
   <img src="screenshots/13-download.png" width="45%" alt="13주차 다운로드 페이지">
-  <img src="screenshots/13-login-error.png" width="45%" alt="13주차 로그인 오류 메시지">
-  <img src="screenshots/13-profile.png" width="45%" alt="13주차 프로필 및 개인정보 수정 화면">
-  <img src="screenshots/13-register-success.png" width="45%" alt="13주차 회원가입 완료 화면">
 </div>
 
 ---
