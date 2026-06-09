@@ -1,24 +1,29 @@
 # Quarkus Java Web Project
 
 > 학번: 20230968  
-> 이름: 기경민
+> 이름: 기경민  
+> 주제: League of Legends 테마 회원관리 웹사이트
 
+Quarkus 기반 자바 웹 프로그래밍 수업 프로젝트입니다.  
+정적 HTML 페이지에서 시작해 챔피언 소개, 검색, MySQL 연동, 회원가입, 로그인, 세션, 프로필 이미지 업로드, 회원정보 수정, 비밀번호 변경까지 주차별로 기능을 확장했습니다.
 
 ---
 
 ## 프로젝트 주요 기능
 
-- LoL 메인 페이지, 챔피언 페이지, 다운로드 페이지 구성
-- Bootstrap 기반 네비게이션 바, 카드, 모달 UI 구현
-- 챔피언 검색 기능 및 JS 이벤트 처리
+- LoL 테마 메인 페이지, 챔피언 페이지, 다운로드 페이지 구성
+- Bootstrap 기반 네비게이션 바, 카드, 모달, Toast UI 구현
+- 챔피언 검색 기능 및 검색 결과 화면 구성
 - MySQL 데이터베이스 연동
-- Panache Entity 기반 사용자/챔피언 데이터 관리
-- 회원가입 및 중복 검사
-- SHA-256 비밀번호 해시 처리
+- Hibernate ORM with Panache 기반 사용자/챔피언 데이터 관리
+- 회원가입, 아이디/이메일 중복 검사
+- SHA-256 기반 비밀번호 해시 처리
 - 로그인/로그아웃 및 세션 관리
-- 로그인 실패 메시지 표시
+- 로그인 실패 메시지 처리
 - 프로필 페이지 및 프로필 이미지 업로드
-- 업로드 파일 확장자/용량 검사 및 오류 메시지 처리
+- 이미지 확장자/용량 검사 및 업로드 오류 메시지 처리
+- 개인정보 수정 및 비밀번호 변경
+- 비밀번호 변경 후 자동 로그아웃 처리
 
 ---
 
@@ -34,12 +39,62 @@
 
 ---
 
+## 실행 방법
+
+```bash
+./mvnw quarkus:dev
+```
+
+브라우저에서 아래 주소로 접속합니다.
+
+```text
+http://localhost:8080/
+```
+
+기본 테스트 계정입니다.
+
+```text
+아이디: guest
+비밀번호: 123123
+```
+
+---
+
+## 주요 파일 구조
+
+```text
+src/main/java/org/acme
+├── champion
+│   ├── Champion.java
+│   └── ChampionResource.java
+├── common
+│   └── DataSeeder.java
+├── login
+│   ├── AuthResource.java
+│   ├── SessionConfig.java
+│   └── User.java
+├── GreetingResource.java
+└── StartWebSocket.java
+
+src/main/resources/META-INF/resources
+├── css
+├── image
+├── js
+├── login
+├── main_page_sub
+├── modals
+├── uploads/profile
+└── main_index.html
+```
+
+---
+
 ## 주차별 진행 내용
 
 ### 2 · 3주차
 
 - Quarkus 프로젝트 환경 구축
-- 기본 HTML 구조 학습
+- HTML 기본 구조 학습
 - LoL 메인 화면 초안 제작
 - 정적 리소스 경로 및 이미지 출력 확인
 
@@ -68,12 +123,13 @@
 
 <div align="center">
   <img src="screenshots/모달 추가2.png" width="45%" alt="5주차 챔피언 모달 추가 화면">
+    <img src="screenshots/13-download.png" width="45%" alt="13주차 다운로드 페이지">
 </div>
 
 ### 6주차
 
 - 챔피언 목록 화면 확장
-- Bootstrap JS 연동
+- Bootstrap JavaScript 연동
 - 검색 기능 구현 준비
 - 모달 및 JS 구조 정리 진행
 
@@ -85,7 +141,6 @@
 - `search.js`, `search.css` 작성
 - 챔피언 데이터 정의 추가
 - Jax, Jinx, Mel, Yunara, Zaahen 등 챔피언 모달 추가
-- README 화면 캡처 정리
 
 <div align="center">
   <img src="screenshots/7주차 실습.png" width="45%" alt="7주차 검색 기능 화면">
@@ -165,7 +220,13 @@
 
 <div align="center">
   <img src="screenshots/13-champion.png" width="45%" alt="13주차 챔피언 페이지">
-  <img src="screenshots/13-download.png" width="45%" alt="13주차 다운로드 페이지">
 </div>
 
 ---
+
+## 최종 정리
+
+- 2주차부터 13주차까지 수업 내용을 주차별로 구현
+- 회원가입, 로그인, 프로필, 회원정보 수정, 비밀번호 변경까지 회원관리 흐름 완성
+- Toast 알림, Tooltip, 검색 기능, 챔피언/다운로드 페이지 등 프론트 기능 정리
+- GitHub 제출용 README와 화면 캡처 정리 완료
