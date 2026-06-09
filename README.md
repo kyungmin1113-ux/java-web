@@ -123,7 +123,7 @@ src/main/resources/META-INF/resources
 
 <div align="center">
   <img src="screenshots/모달 추가2.png" width="45%" alt="5주차 챔피언 모달 추가 화면">
-    <img src="screenshots/13-download.png" width="45%" alt="13주차 다운로드 페이지">
+  <img src="screenshots/13-download.png" width="45%" alt="5주차 다운로드 페이지 최종 화면">
 </div>
 
 ### 6주차
@@ -144,6 +144,7 @@ src/main/resources/META-INF/resources
 
 <div align="center">
   <img src="screenshots/7주차 실습.png" width="45%" alt="7주차 검색 기능 화면">
+  <img src="screenshots/7-search-result.png" width="45%" alt="7주차 챔피언 검색 결과 화면">
   <img src="screenshots/7주차 추가 구현1.png" width="45%" alt="7주차 추가 구현 화면 1">
   <img src="screenshots/7주차 추가 구현2.png" width="45%" alt="7주차 추가 구현 화면 2">
 </div>
@@ -173,6 +174,7 @@ src/main/resources/META-INF/resources
 
 <div align="center">
   <img src="screenshots/13-main.png" width="45%" alt="10주차 로그인 후 메인 화면 기반">
+  <img src="screenshots/10-login.png" width="45%" alt="10주차 로그인 화면">
 </div>
 
 ### 11주차
@@ -185,6 +187,7 @@ src/main/resources/META-INF/resources
 - 회원가입 완료 페이지 추가
 
 <div align="center">
+  <img src="screenshots/11-register-form.png" width="45%" alt="11주차 회원가입 입력 화면">
   <img src="screenshots/13-register-success.png" width="45%" alt="11주차 회원가입 완료 화면">
 </div>
 
@@ -203,6 +206,7 @@ src/main/resources/META-INF/resources
 <div align="center">
   <img src="screenshots/13-login-error.png" width="45%" alt="12주차 로그인 오류 메시지 화면">
   <img src="screenshots/12-profile-upload.png" width="45%" alt="12주차 프로필 이미지 업로드 화면">
+  <img src="screenshots/12-upload-error.png" width="45%" alt="12주차 프로필 업로드 오류 메시지 화면">
   <img src="screenshots/13-profile.png" width="45%" alt="12주차 프로필 페이지 화면">
 </div>
 
@@ -220,7 +224,9 @@ src/main/resources/META-INF/resources
 - 모든 페이지 검색창 동작 흐름 보완
 
 <div align="center">
+  <img src="screenshots/13-toast.png" width="45%" alt="13주차 Toast 알림 화면">
   <img src="screenshots/13-champion.png" width="45%" alt="13주차 챔피언 페이지">
+  <img src="screenshots/13-profile-edit-password.png" width="45%" alt="13주차 개인정보 수정 및 비밀번호 변경 화면">
 </div>
 
 ---
