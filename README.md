@@ -202,6 +202,7 @@ src/main/resources/META-INF/resources
 
 <div align="center">
   <img src="screenshots/13-login-error.png" width="45%" alt="12주차 로그인 오류 메시지 화면">
+  <img src="screenshots/12-profile-upload.png" width="45%" alt="12주차 프로필 이미지 업로드 화면">
   <img src="screenshots/13-profile.png" width="45%" alt="12주차 프로필 페이지 화면">
 </div>
 
